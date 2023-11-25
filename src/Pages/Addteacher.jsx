@@ -1,36 +1,37 @@
 
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+
 import Swal from 'sweetalert2'
 import { AuthContext } from '../firebase/Authprovider';
+import { Link } from 'react-router-dom';
 
 function Addteacher() {
 
 
     const {user}= useContext(AuthContext);
-    const addjob = event =>{
+    const addteacher = event =>{
         event.preventDefault(); 
        
         const form = event.target;
         
-        const employername = form.employername.value;
-        const jobtitle = form.jobtitle.value;
-        const deadline = form.deadline.value;
-        const description = form.description.value;
-        const minimumprice = form.minimumprice.value;
-        const maxprice = form.maxprice.value;
-        const category = form.category.value;
+        const email = form.email.value;
+        const name = form.name.value;
+        const age = form.age.value;
+        const skill = form.skill.value;
+        const timeinweek = form.timeinweek.value;
+        const timeinday = form.timeinday.value;
+        const fee = form.fee.value;
         const img = form.img.value;
 
-        const newjob = { employername,jobtitle,deadline,description,minimumprice,maxprice,category,img };
-        console.log(newjob);
+        const newteacher = { email,name,age,skill,timeinweek,timeinday,fee,img };
+        console.log(newteacher);
 
         fetch('http://localhost:5000/teacher',{
           method : 'POST',
           headers:{
               'content-type': 'application/json'
           },
-          body: JSON.stringify(newjob)
+          body: JSON.stringify(newteacher)
         })
         .then(res=>res.json())
         .then(data=>{
@@ -38,7 +39,7 @@ function Addteacher() {
           if(data.insertedId){
             Swal.fire({
               title: 'success!',
-              text: 'Job added successfully',
+              text: 'You applied successfully',
               icon: 'success',
               confirmButtonText: 'Cool'
             })
@@ -52,19 +53,21 @@ function Addteacher() {
         <div>
              <div>
              <div className="bg-[#eb3434] m-16 p-20">
-            <h1 className="text-center text-3xl font-bold">Add Job details</h1>
+
+            
+            <h1 className="text-center text-3xl font-bold">Add your details</h1>
             <form 
-            onSubmit={addjob}
+            onSubmit={addteacher}
             >
                 {/* row 1 */}
                 <div className="flex">
 
                 <div className="form-control w-1/2">
                   <label className="label m-4 mb-0">
-                  <span className="label-text text-xl font-bold">Email of the teacher</span>
+                  <span className="label-text text-xl font-bold">Email </span>
                   </label>
                   <label className="input-group">
-                  <input type="text" name="employername" defaultValue={user?user.email:""} placeholder="Email of the employer" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                  <input type="text" name="email" defaultValue={user?user.email:""} placeholder="Your Email" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                   </label>
                 </div>
 
@@ -73,7 +76,7 @@ function Addteacher() {
                   <span className="label-text text-xl font-bold">Full Name</span>
                   </label>
                   <label className="input-group">
-                  <input type="text" name="jobtitle" placeholder="Job Title" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                  <input type="text" name="name" placeholder="Your Full name" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                   </label>
                 </div>
 
@@ -87,7 +90,7 @@ function Addteacher() {
                         <span className="label-text text-xl font-bold">Age</span>
                         </label>
                         <label className="input-group">
-                        <input type="number" name="age" placeholder="Your Age" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                        <input type="number" name="age" placeholder="Your Age" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                         </label>
                         </div>
 
@@ -96,7 +99,7 @@ function Addteacher() {
                         <span className="label-text text-xl font-bold">Skills</span>
                         </label>
                         <label className="input-group">
-                        <input type="text" name="skill" placeholder="skill" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                        <input type="text" name="skill" placeholder="skills" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                         </label>
                         </div>
 
@@ -110,7 +113,7 @@ function Addteacher() {
                     <span className="label-text text-xl font-bold">Available Time in a week</span>
                     </label>
                     <label className="input-group">
-                    <input type="number" name="minimumprice" placeholder="Minimum price" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                    <input type="number" name="timeinweek" placeholder="how many days in a week you are available" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                     </label>
                     </div>
 
@@ -119,7 +122,7 @@ function Addteacher() {
                     <span className="label-text text-xl font-bold">Available time in a day</span>
                     </label>
                     <label className="input-group">
-                    <input type="number" name="maxprice" placeholder="Maximum price" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                    <input type="number" name="timeinday" placeholder="Available hr in a day" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                     </label>
                     </div>
 
@@ -129,10 +132,10 @@ function Addteacher() {
 
                         <div className="form-control w-1/2">
                         <label className="label m-4 mb-0">
-                        <span className="label-text text-xl font-bold">category</span>
+                        <span className="label-text text-xl font-bold">Fees</span>
                         </label>
                         <label className="input-group">
-                        <input type="text" name="category" placeholder="category" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                        <input type="number" name="fee" placeholder="fee for a hr" className="input input-bordered mb-4 mt-0 m-4 w-[450px]" />
                         </label>
                         </div>
 
@@ -141,7 +144,7 @@ function Addteacher() {
                         <span className="label-text text-xl font-bold">Image URL</span>
                         </label>
                         <label className="input-group">
-                        <input type="text" name="img" placeholder="Image URL" className="input input-bordered mb-4 mt-0 m-4 w-full" />
+                        <input type="text" name="img" placeholder="Image URL" className="input input-bordered  ml-4 mb-4 mt-0 m-4 w-[450px]" />
                         </label>
                         </div>
 
@@ -158,12 +161,22 @@ function Addteacher() {
 
                       <input type="submit" value="Apply " className="  btn btn-block " />
 
-
+                      <Link to={'/teacher'}>
+      <div className="p-2 pt-2">
+        <button
+          className="block text-xl border-solid border-2 border-[#ff44b7] text-black w-[30%] select-none rounded-lg bg-blue-gray-900/10 py-1 px-2 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+        >
+           See All trainer 
+        </button>
+      </div>
+      </Link>
 
             </form>
-            <Link to='/addcat' > <button className="text-center text-xl font-bold  btn btn-warning m-5">Add jod Category</button> </Link> 
+            
     
         </div>
+       
         </div>
         </div>
     )

@@ -10,6 +10,7 @@ import Register from "../login&reg/Register";
 import Contact from "../Pages/Contact";
 import Community from "../Pages/Community";
 import Addteacher from "../Pages/Addteacher";
+import Trainer from "../Pages/Trainer";
 
   export const router = createBrowserRouter([
     {
@@ -44,6 +45,12 @@ import Addteacher from "../Pages/Addteacher";
       },
       {
           path : "/teacher",
+          element : <Trainer></Trainer>,
+          loader : () => fetch('http://localhost:5000/teacher')
+         
+      },
+      {
+          path : "/addteacher",
           element : <Addteacher></Addteacher>,
          
       }
