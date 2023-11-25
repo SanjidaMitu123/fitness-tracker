@@ -35,7 +35,7 @@ function Navbar() {
                    </li>
                    <li>
                    <NavLink
-                     to="/services"
+                     to="/teacher"
                      className={({ isActive, isPending }) =>
                      isPending ? "pending" : isActive ? "text-[#eb3434]] underline" : ""
                       }
@@ -45,7 +45,7 @@ function Navbar() {
                 </li>
                 <li>
                    <NavLink
-                     to="/works"
+                     to="/clasess"
                      className={({ isActive, isPending }) =>
                      isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }

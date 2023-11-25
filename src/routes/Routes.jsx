@@ -9,6 +9,7 @@ import Login from "../login&reg/Login";
 import Register from "../login&reg/Register";
 import Contact from "../Pages/Contact";
 import Community from "../Pages/Community";
+import Addteacher from "../Pages/Addteacher";
 
   export const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ import Community from "../Pages/Community";
       {
           path : "/register",
           element : <Register></Register>,
+         
+      },
+      {
+          path : "/teacher",
+          element : <Addteacher></Addteacher>,
          
       }
       ]
