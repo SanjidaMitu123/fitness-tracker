@@ -8,6 +8,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import Login from "../login&reg/Login";
 import Register from "../login&reg/Register";
 import Contact from "../Pages/Contact";
+import Community from "../Pages/Community";
 
   export const router = createBrowserRouter([
     {
@@ -29,6 +30,12 @@ import Contact from "../Pages/Contact";
         element : <Contact></Contact>,
        
     } ,
+    
+    {
+      path : "/community",
+      element : <Community></Community>,
+     
+  } ,
       {
           path : "/register",
           element : <Register></Register>,

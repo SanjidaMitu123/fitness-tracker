@@ -1,4 +1,5 @@
 import Slider from "../shared/Slider";
+import Community from "./Community";
 import Contact from "./Contact";
 import Feature from "./Feature";
 import Reviews from "./Reviews";
@@ -15,6 +16,7 @@ function Home() {
             <Slider></Slider>
             <Feature></Feature>
             <Reviews></Reviews>
+            <Community></Community>
             <Contact></Contact>
         </div>
     )

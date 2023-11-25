@@ -81,7 +81,7 @@ function Navbar() {
                      isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }
                      >
-                      Community
+                      About Us
                    </NavLink>
                 </li>
                 <li>
