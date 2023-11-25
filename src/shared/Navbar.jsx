@@ -99,7 +99,7 @@ function Navbar() {
                   user ?
                   
                   <li>
-                   <div>
+                   <div className="flex">
                    
                   <button onClick={singOUT} className=" btn btn-primary">Sing out</button>
                   <span className="text-black"> {user.email} </span>
@@ -115,7 +115,7 @@ function Navbar() {
                   <NavLink
                     to="/login"
                     className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-gray-400 underline" : ""
+                    isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                      }
                     >
                      My Account

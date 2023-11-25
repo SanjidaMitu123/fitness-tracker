@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../firebase/Authprovider";
+import { AuthContext } from "../firebase/Authprovider";
+
+
 
 
 
@@ -66,10 +68,10 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-secondary">Register</button>
+          <button className="btn btn-outline btn-error">Register</button>
         </div>
       </form>
-      <p className="text-center mt-5">Existing Account <Link to='/login' className="font-bold text-blue-500 mt-5"> Login</Link></p>
+      <p className="text-center mt-5">Existing Account <Link to='/login' className="font-bold text-[#eb3434] mt-5"> Login</Link></p>
         </div>
     );
 };
