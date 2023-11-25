@@ -1,4 +1,5 @@
 import Slider from "../shared/Slider";
+import Contact from "./Contact";
 import Feature from "./Feature";
 import Reviews from "./Reviews";
 import { Helmet } from 'react-helmet-async';
@@ -14,6 +15,7 @@ function Home() {
             <Slider></Slider>
             <Feature></Feature>
             <Reviews></Reviews>
+            <Contact></Contact>
         </div>
     )
 }

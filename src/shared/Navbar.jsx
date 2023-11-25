@@ -76,7 +76,7 @@ function Navbar() {
                 </li>
                 <li>
                    <NavLink
-                     to="/contacts"
+                     to="/community"
                      className={({ isActive, isPending }) =>
                      isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }
@@ -100,7 +100,6 @@ function Navbar() {
                   
                   <li>
                    <div className="flex">
-                   
                   <button onClick={singOUT} className=" btn btn-primary">Sing out</button>
                   <span className="text-black"> {user.email} </span>
                   </div>
