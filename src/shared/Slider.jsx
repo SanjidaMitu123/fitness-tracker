@@ -16,6 +16,12 @@ function Slider() {
   <div id="item4" className="carousel-item w-full">
     <img src="https://media.istockphoto.com/id/894242814/photo/cheerful-male-athlete-talking-to-his-friend-on-exercising-training-in-a-health-club.jpg?s=2048x2048&w=is&k=20&c=nwMWprG6X1PWXmRiPBrT7YKQk6wSOO6ruEpT9s4hjP4=" className="w-full" />
   </div>
+  <div className="absolute ">
+  <div className="fixed  text-white text-xl font-bold py-20 pl-20">
+ <h1>Classes are going on </h1>
+ <button className="btn btn-outline btn-error ">Classes</button>
+  </div>
+</div>
 </div> 
 <div className="flex justify-center w-full py-2 gap-2">
   <a href="#item1" className="btn btn-xs">1</a> 
@@ -28,3 +34,5 @@ function Slider() {
 }
 
 export default Slider;
+
+

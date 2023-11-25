@@ -1,11 +1,14 @@
 import Slider from "../shared/Slider";
+import Feature from "./Feature";
+import Reviews from "./Reviews";
 
 
 function Home() {
     return (
         <div>
             <Slider></Slider>
-            <h1>home</h1>
+            <Feature></Feature>
+            <Reviews></Reviews>
         </div>
     )
 }

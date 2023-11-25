@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 const ErrorPage = () => {
     return (
         <div className="h-screen flex justify-center items-center">
+            <div id="wrapper">
+            <img src="https://i.imgur.com/qIufhof.png" />
+            <div id="info">
+                <h3>This page could not be found</h3>
+            </div>
+        </div >
            
            <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
