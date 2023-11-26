@@ -1,6 +1,7 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import Sectiontitle from "../shared/Sectiontitle";
+import { Helmet } from "react-helmet-async";
 
 
 const Contact = () => {
@@ -12,7 +13,10 @@ const Contact = () => {
 
     return (
         <div>
-           
+           <Helmet>
+        <title>Fitness Tracker | Contact</title>
+        
+      </Helmet>
             <div>
                 <Sectiontitle heading={'Contact Us'}></Sectiontitle>
            

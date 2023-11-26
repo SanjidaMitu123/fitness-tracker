@@ -15,6 +15,8 @@ import Trainerdetails from "../Pages/Trainerdetails";
 import Addclasses from "../Pages/Addclasses";
 import Classes from "../Pages/Classes";
 import Classdetails from "../Pages/Classdetails";
+import Reviews from "../Pages/Reviews";
+import PrivateRoute from "./PrivateRoute";
 
   export const router = createBrowserRouter([
     {
@@ -49,31 +51,36 @@ import Classdetails from "../Pages/Classdetails";
          
       },
       {
+        path : "/review",
+        element : <Reviews></Reviews>,
+       
+    },
+      {
           path : "/teacher",
-          element : <Trainer></Trainer>,
+          element : <PrivateRoute><Trainer></Trainer></PrivateRoute>,
           loader : () => fetch('http://localhost:5000/teacher')
          
       },{
         path : "/class",
-        element : <Classes></Classes>,
+        element : <PrivateRoute><Classes></Classes></PrivateRoute>,
         loader : () => fetch('http://localhost:5000/classes')
        
     },
       {
           path : "/addteacher",
-          element : <Addteacher></Addteacher>,
+          element : <PrivateRoute><Addteacher></Addteacher></PrivateRoute>,
          
       },
       {
           path : "/addclass",
-          element : <Addclasses></Addclasses>,
+          element : <PrivateRoute><Addclasses></Addclasses></PrivateRoute>,
          
       },
 
       {
         
         path : "/teacher/:_id",
-        element : <Trainerdetails></Trainerdetails>,
+        element : <PrivateRoute><Trainerdetails></Trainerdetails></PrivateRoute>,
         loader : () => fetch('http://localhost:5000/teacher')
          
       } ,
@@ -81,7 +88,7 @@ import Classdetails from "../Pages/Classdetails";
       {
         
         path : "/classes/:_id",
-        element : <Classdetails></Classdetails>,
+        element : <PrivateRoute><Classdetails></Classdetails></PrivateRoute>,
         loader : () => fetch('http://localhost:5000/classes')
          
       }

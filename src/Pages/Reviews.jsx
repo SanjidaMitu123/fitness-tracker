@@ -7,12 +7,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
+import { Helmet } from "react-helmet-async";
 
 
 function Reviews() {
     return (
         <div>
             <section>
+            <Helmet>
+        <title>Fitness Tracker | Reviews</title>
+        
+      </Helmet>
                   <Sectiontitle
                   heading={'Reviews'}
                   subheading={'Clients seatisfiction is our first priority '}

@@ -56,7 +56,7 @@ function Navbar() {
              
                 <li>
                    <NavLink
-                     to="/reviews"
+                     to="/review"
                      className={({ isActive, isPending }) =>
                      isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }
@@ -64,16 +64,7 @@ function Navbar() {
                       Reviews
                    </NavLink>
                 </li>
-                <li>
-                   <NavLink
-                     to="/blogs"
-                     className={({ isActive, isPending }) =>
-                     isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
-                      }
-                     >
-                      Blogs
-                   </NavLink>
-                </li>
+                
                 <li>
                    <NavLink
                      to="/community"
