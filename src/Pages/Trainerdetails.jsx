@@ -27,12 +27,12 @@ function Trainerdetails() {
     return (
         <div>
            <Helmet>
-        <title>Fitness Tracker | Trainer Details</title>
+        <title>Fitness Tracker | Trainer Profile</title>
         
       </Helmet>
 
 <div>
-            <h1 className="text-4xl text-center font-medium">Trainer Details</h1>
+            <h1 className="text-4xl text-center font-medium">Trainer Profile</h1>
             <div  key={_id}  className="relative flex w-69 flex-col rounded-xl mt-5 bg-clip-border text-gray-700 shadow-md">
     
     <div  className="relative  h-[400px] overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
@@ -93,7 +93,7 @@ function Trainerdetails() {
     <div className="p-2">
       <div className="mb-2 mt-[-20px] mr-[40px] ml-10 flex items-center justify-between">
         <p className="block text-black font-bold font-sans text-3xl leading-relaxed text-blue-gray-900 antialiased">
-        Fees : {fee}
+        Fees : {fee}(Approximately)
         </p>
   
       </div>
@@ -107,6 +107,19 @@ function Trainerdetails() {
       
       
     </div>
+
+    <div className="p-2 pt-2  h-14  ">
+      
+    
+      <Link to={'/addclass'}> <button 
+     //   onClick={addtocart}
+           className="block absolute ml-0 bg-blue-600 h-[40px] mb-2 text-white w-[30%] select-none rounded-lg bg-blue-gray-900/10 py-1 px-2 text-center font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+         type="button"
+       >
+     Add class
+       </button>
+       </Link>
+     </div>
    
     
     <div className="p-2 pt-2  h-14  ">

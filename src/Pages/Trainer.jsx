@@ -15,11 +15,10 @@ function Trainer() {
                <h1 data-aos="fade-up-left" className="text-4xl text-center font-medium">Trainers  </h1>
 
                <Link to={'/addteacher'}>
-      <div className="p-2 pt-2">
+      <div className="p-2 pt-2 ml-[570px]">
 
-      <a className=' text-center font-bold text-xl border-double border-2 border-[#eb3434]  ' >
-              Be a Trainer
-          </a>
+      <button className="btn btn-error">  Be a Trainer</button>
+
        
       </div>
       </Link>
