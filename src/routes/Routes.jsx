@@ -14,6 +14,7 @@ import Trainer from "../Pages/Trainer";
 import Trainerdetails from "../Pages/Trainerdetails";
 import Addclasses from "../Pages/Addclasses";
 import Classes from "../Pages/Classes";
+import Classdetails from "../Pages/Classdetails";
 
   export const router = createBrowserRouter([
     {
@@ -75,7 +76,15 @@ import Classes from "../Pages/Classes";
         element : <Trainerdetails></Trainerdetails>,
         loader : () => fetch('http://localhost:5000/teacher')
          
-      } 
+      } ,
+
+      {
+        
+        path : "/classes/:_id",
+        element : <Classdetails></Classdetails>,
+        loader : () => fetch('http://localhost:5000/classes')
+         
+      }
       ]
     },
   ]);

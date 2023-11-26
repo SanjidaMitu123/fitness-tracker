@@ -159,7 +159,7 @@ function Addclasses() {
 
                       <input type="submit" value="Add class" className="  btn btn-block " />
 
-                      <Link to={'/teacher'}>
+                      <Link to={'/class'}>
       <div className="p-2 pt-2">
         <a className=' font-bold text-xl border-double border-2 border-white'
           

@@ -45,7 +45,7 @@ function Navbar() {
                 </li>
                 <li>
                    <NavLink
-                     to="/clasess"
+                     to="/class"
                      className={({ isActive, isPending }) =>
                      isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }
