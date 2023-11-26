@@ -11,6 +11,7 @@ import Contact from "../Pages/Contact";
 import Community from "../Pages/Community";
 import Addteacher from "../Pages/Addteacher";
 import Trainer from "../Pages/Trainer";
+import Trainerdetails from "../Pages/Trainerdetails";
 
   export const router = createBrowserRouter([
     {
@@ -21,6 +22,7 @@ import Trainer from "../Pages/Trainer";
         {
             path:'/',
             element : <Home></Home>,
+            loader : () => fetch('http://localhost:5000/teacher')
         },
         {
           path : "/login",
@@ -53,7 +55,15 @@ import Trainer from "../Pages/Trainer";
           path : "/addteacher",
           element : <Addteacher></Addteacher>,
          
-      }
+      },
+
+      {
+        
+        path : "/teacher/:_id",
+        element : <Trainerdetails></Trainerdetails>,
+        loader : () => fetch('http://localhost:5000/teacher')
+         
+      } 
       ]
     },
   ]);

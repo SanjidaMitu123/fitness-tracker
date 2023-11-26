@@ -29,7 +29,7 @@ function Trainercard({teacher}) {
       <div className="p-2">
         <div className="mb-2 mt-[-20px] mr-[40px] ml-10 flex items-center justify-between">
           <p className="block font-sans text-sm text-center text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-          {skill}
+          Skills:{skill}
           </p>
     
         </div>
@@ -45,7 +45,7 @@ function Trainercard({teacher}) {
       <div className="p-2">
         <div className="mb-2 mt-[-20px] mr-[40px] ml-10 flex items-center justify-between">
           <p className="block text-xl font-sans text-center text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-            Available day in week:{timeinweek} |Avaialble hr in each day:{timeinday}
+            Available in week: {timeinweek} days    |Available each day: {timeinday} hr 
           </p>
     
         </div>

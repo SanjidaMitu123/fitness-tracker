@@ -16,12 +16,11 @@ function Trainer() {
 
                <Link to={'/addteacher'}>
       <div className="p-2 pt-2">
-        <button
-          className="block text-xl border-solid border-2 border-[#ff44b7] text-black w-[90%] select-none rounded-lg bg-blue-gray-900/10 py-1 px-2 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-          type="button"
-        >
-          Be a Trainer
-        </button>
+
+      <a className=' text-center font-bold text-xl border-double border-2 border-[#eb3434]  ' >
+              Be a Trainer
+          </a>
+       
       </div>
       </Link>
 
