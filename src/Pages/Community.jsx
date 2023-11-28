@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import Sectiontitle from "../shared/Sectiontitle";
 
 
 function Community() {
     return (
         <div>
+
+<Helmet>
+        <title>Fitness Tracker |About us</title>
+        
+      </Helmet>
 
 <div>        
                  <Sectiontitle heading={'About us'}></Sectiontitle>

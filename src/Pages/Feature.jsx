@@ -15,6 +15,8 @@ function Feature() {
         <div>
 
 <section>
+
+  
   <Sectiontitle heading={'Features'} subheading={'We provied best quality services....'}></Sectiontitle>
 <Swiper
         effect={'cards'}

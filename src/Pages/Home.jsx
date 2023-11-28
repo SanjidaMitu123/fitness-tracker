@@ -7,14 +7,16 @@ import { Helmet } from 'react-helmet-async';
 import Trainer from "./Trainer";
 
 
+
 function Home() {
     return (
         <div>
             <Helmet>
-        <title>Fitness Tracker | Home</title>
+        <title>Fitness Tracker |Home</title>
         
       </Helmet>
             <Slider></Slider>
+        
             <Feature></Feature>
             <Reviews></Reviews>
             <Community></Community>

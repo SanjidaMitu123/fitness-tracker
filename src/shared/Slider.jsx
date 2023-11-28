@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 function Slider() {
@@ -19,7 +20,7 @@ function Slider() {
   <div className="absolute ">
   <div className="fixed  text-white text-xl font-bold py-20 pl-20">
  <h1>Classes are going on </h1>
- <button className="btn btn-outline btn-error ">Classes</button>
+ <Link to="/class"><button className="btn btn-outline btn-error ">Classes</button></Link> 
   </div>
 </div>
 </div> 

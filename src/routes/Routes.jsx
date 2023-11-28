@@ -17,6 +17,7 @@ import Classes from "../Pages/Classes";
 import Classdetails from "../Pages/Classdetails";
 import Reviews from "../Pages/Reviews";
 import PrivateRoute from "./PrivateRoute";
+import Bookclass from "../Pages/Bookclass";
 
   export const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ import PrivateRoute from "./PrivateRoute";
             path:'/',
             element : <Home></Home>,
             loader : () => fetch('http://localhost:5000/teacher')
+          
         },
         {
           path : "/login",
@@ -89,6 +91,13 @@ import PrivateRoute from "./PrivateRoute";
         
         path : "/classes/:_id",
         element : <PrivateRoute><Classdetails></Classdetails></PrivateRoute>,
+        loader : () => fetch('http://localhost:5000/classes')
+         
+      } ,
+        {
+        
+        path : "/bookclasses/:_id",
+        element : <PrivateRoute><Bookclass></Bookclass></PrivateRoute>,
         loader : () => fetch('http://localhost:5000/classes')
          
       }

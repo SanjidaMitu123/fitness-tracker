@@ -37,7 +37,7 @@ function Navbar() {
                    <NavLink
                      to="/teacher"
                      className={({ isActive, isPending }) =>
-                     isPending ? "pending" : isActive ? "text-[#eb3434]] underline" : ""
+                     isPending ? "pending" : isActive ? "text-[#eb3434] underline" : ""
                       }
                      >
                       Trainer
