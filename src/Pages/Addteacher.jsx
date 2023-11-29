@@ -26,7 +26,7 @@ function Addteacher() {
         const newteacher = { email,name,age,skill,timeinweek,timeinday,fee,img };
         console.log(newteacher);
 
-        fetch('http://localhost:5000/teacher',{
+        fetch('https://fitness-tracker-server-alpha.vercel.app/teacher',{
           method : 'POST',
           headers:{
               'content-type': 'application/json'
