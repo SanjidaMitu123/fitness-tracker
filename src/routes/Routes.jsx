@@ -28,7 +28,7 @@ import Bookclass from "../Pages/Bookclass";
         {
             path:'/',
             element : <Home></Home>,
-            loader : () => fetch('http://localhost:5000/teacher')
+            loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/teacher')
           
         },
         {
@@ -60,12 +60,12 @@ import Bookclass from "../Pages/Bookclass";
       {
           path : "/teacher",
           element : <PrivateRoute><Trainer></Trainer></PrivateRoute>,
-          loader : () => fetch('http://localhost:5000/teacher')
+          loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/teacher')
          
       },{
         path : "/class",
         element : <PrivateRoute><Classes></Classes></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/classes')
+        loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/classes')
        
     },
       {
@@ -83,7 +83,7 @@ import Bookclass from "../Pages/Bookclass";
         
         path : "/teacher/:_id",
         element : <PrivateRoute><Trainerdetails></Trainerdetails></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/teacher')
+        loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/teacher')
          
       } ,
 
@@ -91,14 +91,14 @@ import Bookclass from "../Pages/Bookclass";
         
         path : "/classes/:_id",
         element : <PrivateRoute><Classdetails></Classdetails></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/classes')
+        loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/classes')
          
       } ,
         {
         
         path : "/bookclasses/:_id",
         element : <PrivateRoute><Bookclass></Bookclass></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/classes')
+        loader : () => fetch('https://fitness-tracker-server-alpha.vercel.app/classes')
          
       }
       ]

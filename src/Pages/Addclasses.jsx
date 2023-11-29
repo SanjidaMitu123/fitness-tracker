@@ -25,7 +25,7 @@ function Addclasses() {
         const newclass = { traineremail,classname,classhr,description,timeinweek,dayname,fee,img };
         console.log(newclass);
 
-        fetch('http://localhost:5000/classes',{
+        fetch('https://fitness-tracker-server-alpha.vercel.app/classes',{
           method : 'POST',
           headers:{
               'content-type': 'application/json'
